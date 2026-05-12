@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI HOT 晨报 · 2026-05-12</title>
+<style>
+  :root {
+    --blue-50: #eff6ff; --blue-100: #dbeafe; --blue-200: #bfdbfe; --blue-300: #93c5fd;
+    --blue-400: #60a5fa; --blue-500: #3b82f6; --blue-600: #2563eb; --blue-700: #1d4ed8;
+    --blue-800: #1e40af; --blue-900: #1e3a8a; --blue-950: #172554;
+    --gray-50: #f9fafb; --gray-400: #9ca3af; --gray-500: #6b7280; --gray-600: #4b5563;
+    --gray-700: #374151; --gray-800: #1f2937; --gray-900: #111827; --white: #ffffff;
+    --radius-lg: 16px; --shadow-sm: 0 1px 3px rgba(30,64,175,0.10);
+    --font-sans: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-sans); background: linear-gradient(160deg, #dbeafe 0%, #ffffff 30%, #eff6ff 60%, #ffffff 100%); min-height: 100vh; color: var(--gray-800); line-height: 1.6; }
+  .hero { background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 30%, #1d4ed8 55%, #2563eb 80%, #3b82f6 100%); padding: 52px 24px 60px; text-align: center; position: relative; overflow: hidden; }
+  .hero::before { content:''; position:absolute; inset:0; background: radial-gradient(ellipse 70% 55% at 50% 0%, rgba(255,255,255,0.12) 0%, transparent 70%); pointer-events:none; }
+  .hero-content { position:relative; z-index:1; max-width:860px; margin:0 auto; }
+  .hero-badge { display:inline-flex; align-items:center; gap:6px; background:rgba(255,255,255,0.18); border:1px solid rgba(255,255,255,0.30); color:#e0e7ff; font-size:12px; font-weight:700; letter-spacing:0.10em; padding:5px 16px; border-radius:999px; margin-bottom:18px; }
+  .hero-badge::before { content:'◉'; color:#60a5fa; font-size:10px; }
+  .hero-title { font-size:clamp(30px,5.5vw,52px); font-weight:900; color:#ffffff; letter-spacing:-0.03em; line-height:1.15; margin-bottom:10px; text-shadow:0 2px 16px rgba(0,0,0,0.25); }
+  .hero-date { font-size:16px; color:rgba(219,234,254,0.95); margin-bottom:36px; font-weight:600; }
+  .hero-stats { display:flex; justify-content:center; flex-wrap:wrap; gap:14px; }
+  .stat-card { background:rgba(255,255,255,0.95); border:1.5px solid rgba(255,255,255,0.5); border-radius:var(--radius-lg); padding:16px 28px; backdrop-filter:blur(12px); min-width:140px; transition:transform 0.2s, box-shadow 0.2s; box-shadow:0 4px 20px rgba(30,64,175,0.18); }
+  .stat-card:hover { transform:translateY(-3px); background:#ffffff; box-shadow:0 8px 30px rgba(30,64,175,0.25); }
+  .stat-num { font-size:32px; font-weight:900; color:#1d4ed8; line-height:1; display:block; margin-bottom:4px; }
+  .stat-label { font-size:12px; color:var(--gray-600); font-weight:600; }
+  .sticky-nav { position:sticky; top:0; z-index:100; background:rgba(255,255,255,0.96); border-bottom:2px solid var(--blue-200); backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); box-shadow:0 2px 16px rgba(30,64,175,0.08); }
+  .nav-inner { max-width:1140px; margin:0 auto; padding:0 24px; display:flex; align-items:center; gap:10px; height:56px; overflow-x:auto; scrollbar-width:none; }
+  .nav-inner::-webkit-scrollbar { display:none; }
+  .nav-link { display:inline-flex; align-items:center; gap:6px; padding:6px 14px; border-radius:999px; font-size:13px; font-weight:700; text-decoration:none; white-space:nowrap; transition:background 0.2s, color 0.2s; }
+  .nav-link-model { color:var(--blue-800); background:var(--blue-50); border:1.5px solid var(--blue-200); }
+  .nav-link-model:hover { background:var(--blue-100); color:var(--blue-900); }
+  .nav-link-product { color:#6d28d9; background:#f5f3ff; border:1.5px solid #c4b5fd; }
+  .nav-link-product:hover { background:#ede9fe; color:#4c1d95; }
+  .nav-link-industry { color:#c2410c; background:#fff7ed; border:1.5px solid #fdba74; }
+  .nav-link-industry:hover { background:#ffedd5; color:#9a3412; }
+  .nav-link-research { color:#0369a1; background:#f0f9ff; border:1.5px solid #7dd3fc; }
+  .nav-link-research:hover { background:#e0f2fe; color:#075985; }
+  .nav-link-tips { color:#a16207; background:#fefce8; border:1.5px solid #fde047; }
+  .nav-link-tips:hover { background:#fef9c3; color:#854d0e; }
+  .nav-link-medical { color:#065f46; background:#ecfdf5; border:1.5px solid #6ee7b7; }
+  .nav-link-medical:hover { background:#d1fae5; color:#064e3b; }
+  .nav-count { background:var(--blue-600); color:white; width:18px; height:18px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; margin-left:4px; }
+  .main { max-width:1140px; margin:0 auto; padding:40px 24px 60px; }
+  .section { margin-bottom:56px; }
+  .section-header { display:flex; align-items:center; gap:14px; margin-bottom:24px; }
+  .section-icon { width:48px; height:48px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:22px; flex-shrink:0; box-shadow:0 2px 8px rgba(30,64,175,0.10); }
+  .section-icon-model { background:linear-gradient(135deg,#2563eb,#1d4ed8); color:#ffffff; }
+  .section-icon-product { background:linear-gradient(135deg,#7c3aed,#6d28d9); color:#ffffff; }
+  .section-icon-industry { background:linear-gradient(135deg,#ea580c,#c2410c); color:#ffffff; }
+  .section-icon-research { background:linear-gradient(135deg,#0284c7,#0369a1); color:#ffffff; }
+  .section-icon-tips { background:linear-gradient(135deg,#ca8a04,#a16207); color:#ffffff; }
+  .section-icon-medical { background:linear-gradient(135deg,#0d9488,#0f766e); color:#ffffff; }
+  .section-title { font-size:22px; font-weight:900; }
+  .section-title-model { color:var(--blue-900); }
+  .section-title-product { color:#4c1d95; }
+  .section-title-industry { color:#9a3412; }
+  .section-title-research { color:#075985; }
+  .section-title-tips { color:#854d0e; }
+  .section-title-medical { color:#064e3b; }
+  .section-sub { font-size:13px; color:var(--gray-500); margin-top:3px; font-weight:500; }
+  .section-divider { flex:1; height:2px; border-radius:1px; opacity:0.5; }
+  .section-divider-model { background:linear-gradient(90deg,var(--blue-500),transparent); }
+  .section-divider-product { background:linear-gradient(90deg,#8b5cf6,transparent); }
+  .section-divider-industry { background:linear-gradient(90deg,#f97316,transparent); }
+  .section-divider-research { background:linear-gradient(90deg,#0ea5e9,transparent); }
+  .section-divider-tips { background:linear-gradient(90deg,#eab308,transparent); }
+  .section-divider-medical { background:linear-gradient(90deg,#14b8a6,transparent); }
+  .card-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:16px; }
+  .card { background:#ffffff; border-radius:var(--radius-lg); border:1.5px solid var(--blue-100); padding:22px; box-shadow:0 2px 8px rgba(30,64,175,0.06); display:flex; flex-direction:column; gap:14px; transition:transform 0.22s ease,box-shadow 0.22s ease,border-color 0.22s ease; }
+  .card:hover { transform:translateY(-4px); box-shadow:0 12px 32px rgba(30,64,175,0.12); border-color:var(--blue-300); }
+  .card-num { width:28px; height:28px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; flex-shrink:0; margin-top:1px; }
+  .card-num-model { background:var(--blue-100); color:var(--blue-800); }
+  .card-num-product { background:#ede9fe; color:#6d28d9; }
+  .card-num-industry { background:#ffedd5; color:#c2410c; }
+  .card-num-research { background:#e0f2fe; color:#0369a1; }
+  .card-num-tips { background:#fef9c3; color:#a16207; }
+  .card-num-medical { background:#d1fae5; color:#065f46; }
+  .card-title { font-size:15px; font-weight:700; color:var(--gray-900); line-height:1.45; flex:1; }
+  .card-meta { display:flex; align-items:center; justify-content:space-between; gap:8px; flex-wrap:wrap; }
+  .source-chip { display:inline-flex; align-items:center; gap:5px; background:var(--blue-50); border:1.5px solid var(--blue-200); color:var(--blue-700); font-size:11px; font-weight:700; padding:3px 10px; border-radius:999px; max-width:220px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .chip-domain { font-size:9px; font-weight:600; color:var(--blue-400); background:var(--blue-100); padding:1px 5px; border-radius:4px; margin-left:2px; }
+  .time-str { font-size:11px; color:var(--gray-400); white-space:nowrap; font-weight:500; }
+  .card-summary { font-size:13px; color:var(--gray-600); line-height:1.7; }
+  .card-footer { margin-top:auto; display:flex; align-items:center; justify-content:space-between; gap:8px; }
+  .card-tags { display:flex; gap:4px; flex-wrap:wrap; }
+  .card-tag { font-size:9px; font-weight:700; padding:2px 6px; border-radius:4px; }
+  .card-tag-en { background:#fef3c7; color:#92400e; }
+  .card-tag-source { background:var(--blue-50); color:var(--blue-600); border:1px solid var(--blue-200); }
+  .read-btn { display:inline-flex; align-items:center; gap:5px; font-size:12px; font-weight:700; padding:6px 16px; border-radius:999px; text-decoration:none; transition:background 0.18s,transform 0.18s; border:1.5px solid transparent; white-space:nowrap; }
+  .read-btn::after { content:''; } /* hover handled by JS or remove */
+  .read-btn-model { color:var(--blue-700); background:var(--blue-50); border-color:var(--blue-300); }
+  .read-btn-model:hover { background:var(--blue-100); }
+  .read-btn-product { color:#6d28d9; background:#f5f3ff; border-color:#c4b5fd; }
+  .read-btn-product:hover { background:#ede9fe; }
+  .read-btn-industry { color:#c2410c; background:#fff7ed; border-color:#fdba74; }
+  .read-btn-industry:hover { background:#ffedd5; }
+  .read-btn-research { color:#0369a1; background:#f0f9ff; border-color:#7dd3fc; }
+  .read-btn-research:hover { background:#e0f2fe; }
+  .read-btn-tips { color:#a16207; background:#fefce8; border-color:#fde047; }
+  .read-btn-tips:hover { background:#fef9c3; }
+  .read-btn-medical { color:#065f46; background:#ecfdf5; border-color:#6ee7b7; }
+  .read-btn-medical:hover { background:#d1fae5; }
+  .report-footer { text-align:center; padding:32px 24px 48px; border-top:2px solid var(--blue-100); color:var(--gray-500); font-size:12px; line-height:1.8; background:linear-gradient(180deg,#f8fafc 0%,#ffffff 100%); }
+  .report-footer a { color:var(--blue-600); text-decoration:none; font-weight:600; }
+  .report-footer a:hover { color:var(--blue-800); text-decoration:underline; }
+  @media (max-width:640px) { .hero{padding:36px 16px 48px;} .stat-card{padding:12px 18px;min-width:100px;} .stat-num{font-size:24px;} .main{padding:28px 16px 48px;} .card-grid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">AI HOT 每日简报 · 数据来自 aihot.virxact.com</div>
+    <h1 class="hero-title">AI 晨报仪表盘</h1>
+    <p class="hero-date">2026-05-12 · 北京时间早报</p>
+    <div class="hero-stats">
+      <div class="stat-card"><span class="stat-num">33</span><span class="stat-label">今日总条数</span></div>
+      <div class="stat-card"><span class="stat-num">3</span><span class="stat-label">🤖 模型发布/更新</span></div>
+      <div class="stat-card"><span class="stat-num">8</span><span class="stat-label">📦 产品发布/更新</span></div>
+      <div class="stat-card"><span class="stat-num">6</span><span class="stat-label">💼 行业动态</span></div>
+      <div class="stat-card"><span class="stat-num">3</span><span class="stat-label">📄 论文研究</span></div>
+      <div class="stat-card"><span class="stat-num">8</span><span class="stat-label">💡 技巧看点</span></div>
+      <div class="stat-card"><span class="stat-num">5</span><span class="stat-label">🏥 医药行业落地</span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="sticky-nav">
+  <div class="nav-inner">
+    <a href="#section-model" class="nav-link nav-link-model">🤖 模型<span class="nav-count">3</span></a>
+    <a href="#section-product" class="nav-link nav-link-product">📦 产品<span class="nav-count">8</span></a>
+    <a href="#section-industry" class="nav-link nav-link-industry">💼 行业<span class="nav-count">6</span></a>
+    <a href="#section-research" class="nav-link nav-link-research">📄 论文<span class="nav-count">3</span></a>
+    <a href="#section-tips" class="nav-link nav-link-tips">💡 技巧<span class="nav-count">8</span></a>
+    <a href="#section-medical" class="nav-link nav-link-medical">🏥 医药<span class="nav-count">5</span></a>
+  </div>
+</nav>
+
+<main class="main">
+
+  <section class="section" id="section-model">
+    <div class="section-header">
+      <div class="section-icon section-icon-model">🤖</div>
+      <div><h2 class="section-title section-title-model">模型发布 / 更新</h2><p class="section-sub">今日共 3 条</p></div>
+      <div class="section-divider section-divider-model"></div>
+    </div>
+    <div class="card-grid">
+      <article class="card" data-title="SenseNova U1图像生成模型登陆ComfyUI平台" data-summary="SenseNova U1图像生成模型现已在ComfyUI上可运行，并获得包括REBEL AI在内的评测者高度认可。REB…" data-source="X：商汤 SenseTime (@SenseTime_AI)" data-domain="x.com">
+        <div class="card-top">
+          <span class="card-num card-num-model">01</span>
+          <h3 class="card-title">SenseNova U1图像生成模型登陆ComfyUI平台</h3>
+        </div>
+        <div class="card-meta">
+          <span class="source-chip"><span class="chip-icon">◎</span> X：商汤 SenseTime (@SenseTime_AI) <span class="chip-domain">x.com</span></span>
+          <span class="time-str"></span>
+        </div>
+        <p class="card-summary">SenseNova U1图像生成模型现已在ComfyUI上可运行，并获得包括REBEL AI在内的评测者高度认可。REB…</p>
+        <div class="card-footer">
+          <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">x.com</span></div>
+          <a class="read-btn read-btn-model" href="https://x.com/SenseTime_AI/status/2053782644492525847" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </article>
+      <article class="card" data-title="AntLingAGI发布万亿参数模型Ring-2.6-1T" data-summary="AntLingAGI发布了其万亿参数旗舰“思考模型”Ring-2.6-1T，该模型在5月15日前可通过OpenRoute…" data-source="X：OpenRouter (@OpenRouter)" data-domain="x.com">
+        <div class="card-top">
+          <span class="card-num card-num-model">02</span>
+          <h3 class="card-title">AntLingAGI发布万亿参数模型Ring-2.6-1T</h3>
+        </div>
+        <div class="card-meta">
+          <span class="source-chip"><span class="chip-icon">◎</span> X：OpenRouter (@OpenRouter) <span class="chip-domain">x.com</span></span>
+          <span class="time-str"></span>
+        </div>
+        <p class="card-summary">AntLingAGI发布了其万亿参数旗舰“思考模型”Ring-2.6-1T，该模型在5月15日前可通过OpenRoute…</p>
+        <div class="card-footer">
+          <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">x.com</span></div>
+          <a class="read-btn read-btn-model" href="https://x.com/OpenRouter/status/2053834087023133025" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </article>
+      <article class="card" data-title="腾讯混元Hy3预览版发布，专注复杂智能体任务" data-summary="腾讯混元Hy3预览版已开放早期体验，被描述为该系列最强模型。其核心设计面向现实世界有效性，而非单纯追求基准测试分数。模型…" data-source="X：腾讯混元 (@TencentHunyuan)" data-domain="x.com">
+        <div class="card-top">
+          <span class="card-num card-num-model">03</span>
+          <h3 class="card-title">腾讯混元Hy3预览版发布，专注复杂智能体任务</h3>
+        </div>
+        <div class="card-meta">
+          <span class="source-chip"><span class="chip-icon">◎</span> X：腾讯混元 (@TencentHunyuan) <span class="chip-domain">x.com</span></span>
+          <span class="time-str"></span>
+        </div>
+        <p class="card-summary">腾讯混元Hy3预览版已开放早期体验，被描述为该系列最强模型。其核心设计面向现实世界有效性，而非单纯追求基准测试分数。模型…</p>
+        <div class="card-footer">
+          <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">x.com</span></div>
+          <a class="read-btn read-btn-model" href="https://x.com/TencentHunyuan/status/2053771684482851255" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </article></div>
+  </section>
+
+  <section class="section" id="section-product">
+    <div class="section-header">
+      <div class="section-icon section-icon-product">📦</div>
+      <div><h2 class="section-title section-title-product">产品发布 / 更新</h2><p class="section-sub">今日共 8 条</p></div>
+      <div class="section-divider section-divider-product"></div>
+    </div>
+    <div class="card-grid">
+      <article class="card" data-title="Anthropic开源金融AI全栈模板，定义行业落地新标准" data-summary="Anthropic在GitHub开源了金融服务行业AI解决方案完整模板库，包含10个端到端智能体、7个垂直行业插件及11…" data-source="X：小北 (@frxiaobei)" data-domain="x.com">
+        <div class="card-top">
+          <span class="card-num card-num-product">04</span>
+          <h3 class="card-title">Anthropic开源金融AI全栈模板，定义行业落地新标准</h3>
+        </div>
+        <div class="card-meta">
+          <span class="source-chip"><span class="chip-icon">◎</span> X：小北 (@frxiaobei) <span class="chip-domain">x.com</span></span>
+          <span class="time-str"></span>
+        </div>
+        <p class="card-summary">Anthropic在GitHub开源了金融服务行业AI解决方案完整模板库，包含10个端到端智能体、7个垂直行业插件及11…</p>
+        <div class="card-footer">
+          <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">x.com</span></div>
+          <a class="read-btn read-btn-product" href="https://x.com/frxiaobei/status/2053861985008431398" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </article>
+      <article class="card" data-title="帕累托代码以市场需求重塑模型选择" data-summary="Pareto Code 是一种利用真实市场需求观察帕累托前沿的新方法 DeepSeek V4 Pro 占据首位，其次是 …" data-source="X：OpenRouter (@OpenRouter)" data-domain="x.com">
+        <div class="card-top">
+          <span class="card-num card-num-product">05</span>
+          <h3 class="card-title">帕累托代码以市场需求重塑模型选择</h3>
+        </div>
+        <div class="card-meta">
+          <span class="source-chip"><span class="chip-icon">◎</span> X：OpenRouter (@OpenRouter) <span class="chip-domain">x.com</span></span>
+          <span class="time-str"></span>
+        </div>
+        <p class="card-summary">Pareto Code 是一种利用真实市场需求观察帕累托前沿的新方法 DeepSeek V4 Pro 占据首位，其次是 …</p>
+        <div class="card-footer">
+          <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">x.com</span></div>
+          <a class="read-btn read-btn-product" href="https://x.com/OpenRouter/status/2053843701261025290" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </article>
+      <article class="card" data-title="Luma Agents：从情绪板到完整广告的自动化创作" data-summary="情绪板曾是最精彩的部分。如今它只是起点。 上传你的参考素材。设定方向。Luma Agents 会将其从情绪板转化为完整的…" data-source="X：Luma AI (@LumaLabsAI)" data-domain="x.com">
+        <div class="card-top">
+          <span class="card-num card-num-product">06</span>
+          <h3 class="card-title">Luma Agents：从情绪板到完整广告的自动化创作</h3>
+        </div>
+        <div class="card-meta">
+          <span class="source-chip"><span class="chip-icon">◎</span> X：Luma AI (@LumaLabsAI) <span class="chip-domain">x.com</span></span>
+          <span class="time-str"></span>
+        </div>
+        <p class="card-summary">情绪板曾是最精彩的部分。如今它只是起点。 上传你的参考素材。设定方向。Luma Agents 会将其从情绪板转化为完整的…</p>
+        <div class="card-footer">
+          <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">x.com</span></div>
+          <a class="read-btn read-btn-product" href="https://x.com/LumaLabsAI/status/2053941836402901409" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </article>
+      <article class="card" data-title="Claude Code v2.1.139 版本更新" data-summary="本次更新引入了多项新功能与优化。核心新增包括：集中管理会话的Agent视图（研究预览）、可设置目标并持续工作的`/goa…" data-source="Claude Code：GitHub Releases（RSS）" data-domain="github.com">
+        <div class="card-top">
+          <span class="card-num card-num-product">07</span>
+          <h3 class="card-title">Claude Code v2.1.139 版本更新</h3>
+        </div>
+        <div class="card-meta">
+          <span class="source-chip"><span class="chip-icon">⬡</span> Claude Code：GitHub Releases（RSS） <span class="chip-domain">github.com</span></span>
+          <span class="time-str"></span>
+        </div>
+        <p class="card-summary">本次更新引入了多项新功能与优化。核心新增包括：集中管理会话的Agent视图（研究预览）、可设置目标并持续工作的`/goa…</p>
+        <div class="card-footer">
+          <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">github.com</span></div>
+          <a class="read-btn read-btn-product" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.139" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </article>
+      <article class="card" data-title="HappyHorse AI视频引擎登陆阿里云" data-summary="资产审核：通过。物理逻辑：无缝衔接。🐎 HappyHorse是面向生产就绪内容的排名第一的AI视频引擎。从复杂的物理交…" data-source="X：阿里云 / Alibaba Cloud (@alibaba_cloud)" data-domain="x.com">
+        <div class="card-top">
+          <span class="card-num card-num-product">08</span>
+          <h3 class="card-title">HappyHorse AI视频引擎登陆阿里云</h3>
+        </div>
+        <div class="card-meta">
+          <span class="source-chip"><span class="chip-icon">◎</span> X：阿里云 / Alibaba Cloud (@alibaba_cloud) <span class="chip-domain">x.com</span></span>
+          <span class="time-str"></span>
+        </div>
+        <p class="card-summary">资产审核：通过。物理逻辑：无缝衔接。🐎 HappyHorse是面向生产就绪内容的排名第一的AI视频引擎。从复杂的物理交…</p>
+        <div class="card-footer">
+          <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">x.com</span></div>
+          <a class="read-btn read-btn-product" href="https://x.com/alibaba_cloud/status/2053646520998560033" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </article>
+      <article class="card" data-title="Claude Code 发布多任务管理工具 Agent View" data-summary="Claude Code 推出 Agent View，解决了多任务运行时需在多个终端窗口间切换、状态难以区分的痛点。该工具…" data-source="X：小互 (@xiaohu)" data-domain="x.com">
+        <div class="card-top">
+          <span class="card-num card-num-product">09</span>
+          <h3 class="card-title">Claude Code 发布多任务管理工具 Agent View</h3>
+        </div>
+        <div class="card-meta">
+          <span class="source-chip"><span class="chip-icon">◎</span> X：小互 (@xiaohu) <span class="chip-domain">x.com</span></span>
+          <span class="time-str"></span>
+        </div>
+        <p class="card-summary">Claude Code 推出 Agent View，解决了多任务运行时需在多个终端窗口间切换、状态难以区分的痛点。该工具…</p>
+        <div class="card-footer">
+          <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">x.com</span></div>
+          <a class="read-btn read-btn-product" href="https://x.com/xiaohu/status/2053985835339661679" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </article>
+      <article class="card" data-title="中国移动上线AI模型中转平台MoMA，国家队入局AI基础设施竞争" data-summary="中国移动推出的AI模型中转平台MoMA，标志着“国家队”正式进入AI基础设施领域。该平台已接入DeepSeek、通义千问…" data-source="X：阿易 AI Notes (@AYi_AInotes)" data-domain="x.com">
+        <div class="card-top">
+          <span class="card-num card-num-product">10</span>
+          <h3 class="card-title">中国移动上线AI模型中转平台MoMA，国家队入局AI基础设施竞争</h3>
+        </div>
+        <div class="card-meta">
+          <span class="source-chip"><span class="chip-icon">◎</span> X：阿易 AI Notes (@AYi_AInotes) <span class="chip-domain">x.com</span></span>
+          <span class="time-str"></span>
+        </div>
+        <p class="card-summary">中国移动推出的AI模型中转平台MoMA，标志着“国家队”正式进入AI基础设施领域。该平台已接入DeepSeek、通义千问…</p>
+        <div class="card-footer">
+          <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">x.com</span></div>
+          <a class="read-btn read-btn-product" href="https://x.com/AYi_AInotes/status/2053699900727075150" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </article>
+      <article class="card" data-title="Anthropic在AWS上正式推出Claude平台" data-summary="Anthropic公司正式在AWS上推出Claude平台，为AWS客户提供了通过其现有身份验证、账单及承诺消费抵扣使用完…" data-source="Claude：Blog（网页）" data-domain="claude.com">
+        <div class="card-top">
+          <span class="card-num card-num-product">11</span>
+          <h3 class="card-title">Anthropic在AWS上正式推出Claude平台</h3>
+        </div>
+        <div class="card-meta">
+          <span class="source-chip"><span class="chip-icon">◎</span> Claude：Blog（网页） <span class="chip-domain">claude.com</span></span>
+          <span class="time-str"></span>
+        </div>
+        <p class="card-summary">Anthropic公司正式在AWS上推出Claude平台，为AWS客户提供了通过其现有身份验证、账单及承诺消费抵扣使用完…</p>
+        <div class="card-footer">
+          <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">claude.com</span></div>
+          <a class="read-btn read-btn-product" href="https://claude.com/blog/claude-platform-on-aws" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </article></div>
+  </section>
+
+  <section class="section" id="section-industry">
+    <div class="section-header">
+      <div class="section-icon section-icon-industry">💼</div>
+      <div><h2 class="section-title section-title-industry">行业动态</h2><p class="section-sub">今日共 6 条</p></div>
+      <div class="section-divider section-divider-industry"></div>
+    </div>
+    <div class="card-grid">
+      <article class="card" data-title="OpenAI 推出 DeployCo 以协助企业围绕智能构建业务" data-summary="OpenAI 正式推出全新企业部署公司 DeployCo，旨在帮助各类组织将前沿人工智能技术投入实际生产，并转化为可衡量…" data-source="OpenAI：官网动态（RSS · 排除企业/客户案例）" data-domain="openai.com">
+        <div class="card-top">
+          <span class="card-num card-num-industry">12</span>
+          <h3 class="card-title">OpenAI 推出 DeployCo 以协助企业围绕智能构建业务</h3>
+        </div>
+        <div class="card-meta">
+          <span class="source-chip"><span class="chip-icon">◎</span> OpenAI：官网动态（RSS · 排除企业/客户案例） <span class="chip-domain">openai.com</span></span>
+          <span class="time-str"></span>
+        </div>
+        <p class="card-summary">OpenAI 正式推出全新企业部署公司 DeployCo，旨在帮助各类组织将前沿人工智能技术投入实际生产，并转化为可衡量…</p>
+        <div class="card-footer">
+          <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">openai.com</span></div>
+          <a class="read-btn read-btn-industry" href="https://openai.com/index/openai-launches-the-deployment-company" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </article>
+      <article class="card" data-title="消息称 AI 芯片企业 Cerebras IPO 获 20+ 倍超额认购，拟调升发行价近三成" data-summary="AI芯片企业Cerebras的IPO获得超过20倍超额认购，有望成为2026年以来全球最大IPO。公司计划将发行股票数量…" data-source="IT之家（RSS）" data-domain="ithome.com">
+        <div class="card-top">
+          <span class="card-num card-num-industry">13</span>
+          <h3 class="card-title">消息称 AI 芯片企业 Cerebras IPO 获 20+ 倍超额认购，拟调升发行价近三成</h3>
+        </div>
+        <div class="card-meta">
+          <span class="source-chip"><span class="chip-icon">◎</span> IT之家（RSS） <span class="chip-domain">ithome.com</span></span>
+          <span class="time-str"></span>
+        </div>
+        <p class="card-summary">AI芯片企业Cerebras的IPO获得超过20倍超额认购，有望成为2026年以来全球最大IPO。公司计划将发行股票数量…</p>
+        <div class="card-footer">
+          <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">ithome.com</span></div>
+          <a class="read-btn read-btn-industry" href="https://www.ithome.com/0/948/591.htm" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </article>
+      <article class="card" data-title="纳德拉出庭反击马斯克诉讼案：他明明有我的手机号，但从未抱怨过微软与 OpenAI 的合作" data-summary="微软CEO纳德拉在马斯克诉OpenAI案中作证，反驳了马斯克关于OpenAI背离非营利初衷的指控。他出示了马斯克2016…" data-source="IT之家（RSS）" data-domain="ithome.com">
+        <div class="card-top">
+          <span class="card-num card-num-industry">14</span>
+          <h3 class="card-title">纳德拉出庭反击马斯克诉讼案：他明明有我的手机号，但从未抱怨过微软与 OpenAI 的合作</h3>
+        </div>
+        <div class="card-meta">
+          <span class="source-chip"><span class="chip-icon">◎</span> IT之家（RSS） <span class="chip-domain">ithome.com</span></span>
+          <span class="time-str"></span>
+        </div>
+        <p class="card-summary">微软CEO纳德拉在马斯克诉OpenAI案中作证，反驳了马斯克关于OpenAI背离非营利初衷的指控。他出示了马斯克2016…</p>
+        <div class="card-footer">
+          <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">ithome.com</span></div>
+          <a class="read-btn read-btn-industry" href="https://www.ithome.com/0/949/045.htm" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </article>
+      <article class="card" data-title="Anthropic估值五日激增2000亿美元，营收呈指数级增长" data-summary="人工智能公司Anthropic的市场隐含估值在短短五天内从1.2万亿美元飙升至1.4万亿美元，暴增2000亿美元。根据链…" data-source="X：Kim (@kimmonismus)" data-domain="x.com">
+        <div class="card-top">
+          <span class="card-num card-num-industry">15</span>
+          <h3 class="card-title">Anthropic估值五日激增2000亿美元，营收呈指数级增长</h3>
+        </div>
+        <div class="card-meta">
+          <span class="source-chip"><span class="chip-icon">◎</span> X：Kim (@kimmonismus) <span class="chip-domain">x.com</span></span>
+          <span class="time-str"></span>
+        </div>
+        <p class="card-summary">人工智能公司Anthropic的市场隐含估值在短短五天内从1.2万亿美元飙升至1.4万亿美元，暴增2000亿美元。根据链…</p>
+        <div class="card-footer">
+          <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">x.com</span></div>
+          <a class="read-btn read-btn-industry" href="https://x.com/kimmonismus/status/2053911732028907972" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </article>
+      <article class="card" data-title="旧金山AI模型开发者盛会周三举行" data-summary="本周三在旧金山，与@vercel_dev、@AnthropicAI和@Kimi_Moonshot共同参与美国下一代模型盛…" data-source="X：MiniMax (@MiniMax_AI)" data-domain="x.com">
+        <div class="card-top">
+          <span class="card-num card-num-industry">16</span>
+          <h3 class="card-title">旧金山AI模型开发者盛会周三举行</h3>
+        </div>
+        <div class="card-meta">
+          <span class="source-chip"><span class="chip-icon">◎</span> X：MiniMax (@MiniMax_AI) <span class="chip-domain">x.com</span></span>
+          <span class="time-str"></span>
+        </div>
+        <p class="card-summary">本周三在旧金山，与@vercel_dev、@AnthropicAI和@Kimi_Moonshot共同参与美国下一代模型盛…</p>
+        <div class="card-footer">
+          <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">x.com</span></div>
+          <a class="read-btn read-btn-industry" href="https://x.com/MiniMax_AI/status/2053899661334003938" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </article>
+      <article class="card" data-title="MiniMax组建“10x团队”，邀请领域专家共推AI跨越式发展" data-summary="MiniMax宣布成立“10x团队”，旨在邀请各领域深度专家共同推动人工智能实现十倍速进步。公司认为大模型已从演示阶段发…" data-source="X：MiniMax (@MiniMax_AI)" data-domain="x.com">
+        <div class="card-top">
+          <span class="card-num card-num-industry">17</span>
+          <h3 class="card-title">MiniMax组建“10x团队”，邀请领域专家共推AI跨越式发展</h3>
+        </div>
+        <div class="card-meta">
+          <span class="source-chip"><span class="chip-icon">◎</span> X：MiniMax (@MiniMax_AI) <span class="chip-domain">x.com</span></span>
+          <span class="time-str"></span>
+        </div>
+        <p class="card-summary">MiniMax宣布成立“10x团队”，旨在邀请各领域深度专家共同推动人工智能实现十倍速进步。公司认为大模型已从演示阶段发…</p>
+        <div class="card-footer">
+          <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">x.com</span></div>
+          <a class="read-btn read-btn-industry" href="https://x.com/MiniMax_AI/status/2053860184532066737" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </article></div>
+  </section>
+
+  <section class="section" id="section-research">
+    <div class="section-header">
+      <div class="section-icon section-icon-research">📄</div>
+      <div><h2 class="section-title section-title-research">论文研究</h2><p class="section-sub">今日共 3 条</p></div>
+      <div class="section-divider section-divider-research"></div>
+    </div>
+    <div class="card-grid">
+      <article class="card" data-title="小块有大智慧？这下真成真了！" data-summary="一项新研究证明，一个通过强化学习训练的7B语言模型能够有效指挥GPT-5、Claude Sonnet 4和Gemini …" data-source="X：Berry Xia (@berryxia)" data-domain="x.com">
+        <div class="card-top">
+          <span class="card-num card-num-research">18</span>
+          <h3 class="card-title">小块有大智慧？这下真成真了！</h3>
+        </div>
+        <div class="card-meta">
+          <span class="source-chip"><span class="chip-icon">◎</span> X：Berry Xia (@berryxia) <span class="chip-domain">x.com</span></span>
+          <span class="time-str"></span>
+        </div>
+        <p class="card-summary">一项新研究证明，一个通过强化学习训练的7B语言模型能够有效指挥GPT-5、Claude Sonnet 4和Gemini …</p>
+        <div class="card-footer">
+          <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">x.com</span></div>
+          <a class="read-btn read-btn-research" href="https://x.com/berryxia/status/2053794010582683759" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </article>
+      <article class="card" data-title="智能体执行能力强但优化用户立场不足" data-summary="通过SocialReasoning Bench测试发现，各模型呈现稳定模式——智能体能够胜任执行任务，但即便在明确要求优…" data-source="X：Microsoft Research (@MSFTResearch)" data-domain="x.com">
+        <div class="card-top">
+          <span class="card-num card-num-research">19</span>
+          <h3 class="card-title">智能体执行能力强但优化用户立场不足</h3>
+        </div>
+        <div class="card-meta">
+          <span class="source-chip"><span class="chip-icon">◎</span> X：Microsoft Research (@MSFTResearch) <span class="chip-domain">x.com</span></span>
+          <span class="time-str"></span>
+        </div>
+        <p class="card-summary">通过SocialReasoning Bench测试发现，各模型呈现稳定模式——智能体能够胜任执行任务，但即便在明确要求优…</p>
+        <div class="card-footer">
+          <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">x.com</span></div>
+          <a class="read-btn read-btn-research" href="https://x.com/MSFTResearch/status/2053890478165147693" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </article>
+      <article class="card" data-title="BalCapRL: 基于强化学习的MLLM图像描述平衡框架" data-summary="研究团队针对多模态大语言模型图像描述任务提出BalCapRL平衡框架。该框架通过设计多维度奖励函数，系统解决了现有强化学…" data-source="Apple Machine Learning Research（RSS）" data-domain="machinelearning.apple.com">
+        <div class="card-top">
+          <span class="card-num card-num-research">20</span>
+          <h3 class="card-title">BalCapRL: 基于强化学习的MLLM图像描述平衡框架</h3>
+        </div>
+        <div class="card-meta">
+          <span class="source-chip"><span class="chip-icon">◎</span> Apple Machine Learning Research（RSS） <span class="chip-domain">machinelearning.apple.com</span></span>
+          <span class="time-str"></span>
+        </div>
+        <p class="card-summary">研究团队针对多模态大语言模型图像描述任务提出BalCapRL平衡框架。该框架通过设计多维度奖励函数，系统解决了现有强化学…</p>
+        <div class="card-footer">
+          <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">machinelearning.apple.com</span></div>
+          <a class="read-btn read-btn-research" href="https://machinelearning.apple.com/research/balcaprl-mllm-image-captioning" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </article></div>
+  </section>
+
+  <section class="section" id="section-tips">
+    <div class="section-header">
+      <div class="section-icon section-icon-tips">💡</div>
+      <div><h2 class="section-title section-title-tips">技巧与看点</h2><p class="section-sub">今日共 8 条</p></div>
+      <div class="section-divider section-divider-tips"></div>
+    </div>
+    <div class="card-grid">
+      <article class="card" data-title="在脚本的shebang行中使用LLM" data-summary="本文介绍了一种创新方法，将LLM工具直接嵌入脚本的shebang行中执行指令。通过LLM的fragments模式，she…" data-source="Simon Willison 博客" data-domain="simonwillison.net">
+        <div class="card-top">
+          <span class="card-num card-num-tips">21</span>
+          <h3 class="card-title">在脚本的shebang行中使用LLM</h3>
+        </div>
+        <div class="card-meta">
+          <span class="source-chip"><span class="chip-icon">◎</span> Simon Willison 博客 <span class="chip-domain">simonwillison.net</span></span>
+          <span class="time-str"></span>
+        </div>
+        <p class="card-summary">本文介绍了一种创新方法，将LLM工具直接嵌入脚本的shebang行中执行指令。通过LLM的fragments模式，she…</p>
+        <div class="card-footer">
+          <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">simonwillison.net</span></div>
+          <a class="read-btn read-btn-tips" href="https://simonwillison.net/2026/May/11/llm-shebang" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </article>
+      <article class="card" data-title="开源PPT工具“鬼藏PPT技能”迎重大更新，新增瑞士风格与AI配图功能" data-summary="开源项目“鬼藏PPT技能”迎来重大更新，新增瑞士国际主义视觉风格，提供克莱因蓝等四套主题色。核心升级包括：通过接入GPT…" data-source="X：歸藏 (@op7418)" data-domain="x.com">
+        <div class="card-top">
+          <span class="card-num card-num-tips">22</span>
+          <h3 class="card-title">开源PPT工具“鬼藏PPT技能”迎重大更新，新增瑞士风格与AI配图功能</h3>
+        </div>
+        <div class="card-meta">
+          <span class="source-chip"><span class="chip-icon">◎</span> X：歸藏 (@op7418) <span class="chip-domain">x.com</span></span>
+          <span class="time-str"></span>
+        </div>
+        <p class="card-summary">开源项目“鬼藏PPT技能”迎来重大更新，新增瑞士国际主义视觉风格，提供克莱因蓝等四套主题色。核心升级包括：通过接入GPT…</p>
+        <div class="card-footer">
+          <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">x.com</span></div>
+          <a class="read-btn read-btn-tips" href="https://x.com/op7418/status/2053657613460771142" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </article>
+      <article class="card" data-title="AI工具批量生成知识产权申请材料引关注" data-summary="知识产权全面沦陷。 发明专利生成 skill https://github.com/handsomestWei/pate…" data-source="X：小北 (@frxiaobei)" data-domain="x.com">
+        <div class="card-top">
+          <span class="card-num card-num-tips">23</span>
+          <h3 class="card-title">AI工具批量生成知识产权申请材料引关注</h3>
+        </div>
+        <div class="card-meta">
+          <span class="source-chip"><span class="chip-icon">◎</span> X：小北 (@frxiaobei) <span class="chip-domain">x.com</span></span>
+          <span class="time-str"></span>
+        </div>
+        <p class="card-summary">知识产权全面沦陷。 发明专利生成 skill https://github.com/handsomestWei/pate…</p>
+        <div class="card-footer">
+          <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">x.com</span></div>
+          <a class="read-btn read-btn-tips" href="https://x.com/frxiaobei/status/2053827716605169804" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </article>
+      <article class="card" data-title="人机交互界面的演进：从文本到交互式神经视频" data-summary="作者认为，AI的人机交互界面正从当前的Markdown默认输出向更丰富的HTML格式演进，后者能提供更好的图形、布局和交…" data-source="X：Andrej Karpathy (@karpathy)" data-domain="x.com">
+        <div class="card-top">
+          <span class="card-num card-num-tips">24</span>
+          <h3 class="card-title">人机交互界面的演进：从文本到交互式神经视频</h3>
+        </div>
+        <div class="card-meta">
+          <span class="source-chip"><span class="chip-icon">◎</span> X：Andrej Karpathy (@karpathy) <span class="chip-domain">x.com</span></span>
+          <span class="time-str"></span>
+        </div>
+        <p class="card-summary">作者认为，AI的人机交互界面正从当前的Markdown默认输出向更丰富的HTML格式演进，后者能提供更好的图形、布局和交…</p>
+        <div class="card-footer">
+          <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">x.com</span></div>
+          <a class="read-btn read-btn-tips" href="https://x.com/karpathy/status/2053872850101285137" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </article>
+      <article class="card" data-title="兄弟们！这套结构，这个图理解后。GPT-Image-2 生图也就算是入门了吧。" data-summary="推文介绍了一套提升AI生图质量的结构化提示词框架。其核心是“结构越清晰，输出质量越好”。框架将提示系统分解为几个关键模块…" data-source="X：Berry Xia (@berryxia)" data-domain="x.com">
+        <div class="card-top">
+          <span class="card-num card-num-tips">25</span>
+          <h3 class="card-title">兄弟们！这套结构，这个图理解后。GPT-Image-2 生图也就算是入门了吧。</h3>
+        </div>
+        <div class="card-meta">
+          <span class="source-chip"><span class="chip-icon">◎</span> X：Berry Xia (@berryxia) <span class="chip-domain">x.com</span></span>
+          <span class="time-str"></span>
+        </div>
+        <p class="card-summary">推文介绍了一套提升AI生图质量的结构化提示词框架。其核心是“结构越清晰，输出质量越好”。框架将提示系统分解为几个关键模块…</p>
+        <div class="card-footer">
+          <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">x.com</span></div>
+          <a class="read-btn read-btn-tips" href="https://x.com/berryxia/status/2053842082603937926" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </article>
+      <article class="card" data-title="菲尔兹奖得主亲测 ChatGPT 5.5 Pro：17 分钟出论文级成果，替学生拉响红色警报" data-summary="菲尔兹奖得主 Timothy Gowers 测试 ChatGPT 5.5 Pro，AI 在 17 分钟内独立解决了一个加…" data-source="IT之家（RSS）" data-domain="ithome.com">
+        <div class="card-top">
+          <span class="card-num card-num-tips">26</span>
+          <h3 class="card-title">菲尔兹奖得主亲测 ChatGPT 5.5 Pro：17 分钟出论文级成果，替学生拉响红色警报</h3>
+        </div>
+        <div class="card-meta">
+          <span class="source-chip"><span class="chip-icon">◎</span> IT之家（RSS） <span class="chip-domain">ithome.com</span></span>
+          <span class="time-str"></span>
+        </div>
+        <p class="card-summary">菲尔兹奖得主 Timothy Gowers 测试 ChatGPT 5.5 Pro，AI 在 17 分钟内独立解决了一个加…</p>
+        <div class="card-footer">
+          <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">ithome.com</span></div>
+          <a class="read-btn read-btn-tips" href="https://www.ithome.com/0/949/032.htm" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </article>
+      <article class="card" data-title="传奇总部“Cog House”首度公开：天才创始人Scott Wu与Cognition AI的崛起之路" data-summary="推文首次公开了Cognition AI总部“Cog House”的内部影像。创始人Scott Wu是美国顶尖竞技程序员，…" data-source="X：swyx (@swyx)" data-domain="x.com">
+        <div class="card-top">
+          <span class="card-num card-num-tips">27</span>
+          <h3 class="card-title">传奇总部“Cog House”首度公开：天才创始人Scott Wu与Cognition AI的崛起之路</h3>
+        </div>
+        <div class="card-meta">
+          <span class="source-chip"><span class="chip-icon">◎</span> X：swyx (@swyx) <span class="chip-domain">x.com</span></span>
+          <span class="time-str"></span>
+        </div>
+        <p class="card-summary">推文首次公开了Cognition AI总部“Cog House”的内部影像。创始人Scott Wu是美国顶尖竞技程序员，…</p>
+        <div class="card-footer">
+          <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">x.com</span></div>
+          <a class="read-btn read-btn-tips" href="https://x.com/swyx/status/2053856676969890189" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </article>
+      <article class="card" data-title="3.3万星AI论文学习库，收录精选视频教程" data-summary="一个在GitHub上获得3.3万星标的AI论文学习资源库，作者系统性地收集和整理了高质量的AI学习视频。资源主要来自Yo…" data-source="X：Vista (@vista8)" data-domain="x.com">
+        <div class="card-top">
+          <span class="card-num card-num-tips">28</span>
+          <h3 class="card-title">3.3万星AI论文学习库，收录精选视频教程</h3>
+        </div>
+        <div class="card-meta">
+          <span class="source-chip"><span class="chip-icon">◎</span> X：Vista (@vista8) <span class="chip-domain">x.com</span></span>
+          <span class="time-str"></span>
+        </div>
+        <p class="card-summary">一个在GitHub上获得3.3万星标的AI论文学习资源库，作者系统性地收集和整理了高质量的AI学习视频。资源主要来自Yo…</p>
+        <div class="card-footer">
+          <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">x.com</span></div>
+          <a class="read-btn read-btn-tips" href="https://x.com/vista8/status/2053816596762968128" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </article></div>
+  </section>
+
+  <section class="section" id="section-medical">
+    <div class="section-header">
+      <div class="section-icon section-icon-medical">🏥</div>
+      <div><h2 class="section-title section-title-medical">医药行业落地案例</h2><p class="section-sub">近 7 日共 5 条</p></div>
+      <div class="section-divider section-divider-medical"></div>
+    </div>
+    <div class="card-grid">
+      <article class="card" data-title="在AMD ROCm平台微调临床问答模型MedQA：无需CUDA" data-summary="一篇博客介绍了在AMD ROCm开源计算平台上微调临床问答AI模型MedQA的实践。该工作成功摆脱了对英伟达CUDA生态…" data-source="Hugging Face：Blog（RSS）" data-domain="huggingface.co">
+        <div class="card-top">
+          <span class="card-num card-num-medical">29</span>
+          <h3 class="card-title">在AMD ROCm平台微调临床问答模型MedQA：无需CUDA</h3>
+        </div>
+        <div class="card-meta">
+          <span class="source-chip"><span class="chip-icon">◎</span> Hugging Face：Blog（RSS） <span class="chip-domain">huggingface.co</span></span>
+          <span class="time-str">下午15:54</span>
+        </div>
+        <p class="card-summary">一篇博客介绍了在AMD ROCm开源计算平台上微调临床问答AI模型MedQA的实践。该工作成功摆脱了对英伟达CUDA生态…</p>
+        <div class="card-footer">
+          <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">huggingface.co</span></div>
+          <a class="read-btn read-btn-medical" href="https://huggingface.co/blog/lablab-ai-amd-developer-hackathon/medqa" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </article>
+      <article class="card" data-title="谷歌研究揭示：结构化问询与可穿戴数据是AI医疗诊断的关键" data-summary="谷歌团队通过Fitbit对近1.4万名用户进行了为期9个月的AI症状检查测试。在盲评中，临床医生将AI诊断列为首选的比例…" data-source="X：Kim (@kimmonismus)" data-domain="x.com">
+        <div class="card-top">
+          <span class="card-num card-num-medical">30</span>
+          <h3 class="card-title">谷歌研究揭示：结构化问询与可穿戴数据是AI医疗诊断的关键</h3>
+        </div>
+        <div class="card-meta">
+          <span class="source-chip"><span class="chip-icon">◎</span> X：Kim (@kimmonismus) <span class="chip-domain">x.com</span></span>
+          <span class="time-str">凌晨2:08</span>
+        </div>
+        <p class="card-summary">谷歌团队通过Fitbit对近1.4万名用户进行了为期9个月的AI症状检查测试。在盲评中，临床医生将AI诊断列为首选的比例…</p>
+        <div class="card-footer">
+          <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">x.com</span></div>
+          <a class="read-btn read-btn-medical" href="https://x.com/kimmonismus/status/2052450461278744798" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </article>
+      <article class="card" data-title="走进中国AI实验室内部笔记" data-summary="作者实地走访中国多家头部AI实验室，观察到国内AI发展呈现三大特征：模型能力正快速逼近国际前沿，部分中文场景表现甚至超越…" data-source="Nathan Lambert：Interconnects（RSS）" data-domain="interconnects.ai">
+        <div class="card-top">
+          <span class="card-num card-num-medical">31</span>
+          <h3 class="card-title">走进中国AI实验室内部笔记</h3>
+        </div>
+        <div class="card-meta">
+          <span class="source-chip"><span class="chip-icon">◎</span> Nathan Lambert：Interconnects（RSS） <span class="chip-domain">interconnects.ai</span></span>
+          <span class="time-str">晚上23:42</span>
+        </div>
+        <p class="card-summary">作者实地走访中国多家头部AI实验室，观察到国内AI发展呈现三大特征：模型能力正快速逼近国际前沿，部分中文场景表现甚至超越…</p>
+        <div class="card-footer">
+          <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">interconnects.ai</span></div>
+          <a class="read-btn read-btn-medical" href="https://www.interconnects.ai/p/notes-from-inside-chinas-ai-labs" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </article>
+      <article class="card" data-title="豆包大模型家族首款全模态理解模型：字节跳动 Doubao-Seed-2.0-lite 升级" data-summary="字节跳动火山引擎发布豆包大模型家族首款全模态理解模型 Doubao-Seed-2.0-lite 升级版。该模型原生统一支…" data-source="IT之家（RSS）" data-domain="ithome.com">
+        <div class="card-top">
+          <span class="card-num card-num-medical">32</span>
+          <h3 class="card-title">豆包大模型家族首款全模态理解模型：字节跳动 Doubao-Seed-2.0-lite 升级</h3>
+        </div>
+        <div class="card-meta">
+          <span class="source-chip"><span class="chip-icon">◎</span> IT之家（RSS） <span class="chip-domain">ithome.com</span></span>
+          <span class="time-str">晚上21:51</span>
+        </div>
+        <p class="card-summary">字节跳动火山引擎发布豆包大模型家族首款全模态理解模型 Doubao-Seed-2.0-lite 升级版。该模型原生统一支…</p>
+        <div class="card-footer">
+          <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">ithome.com</span></div>
+          <a class="read-btn read-btn-medical" href="https://www.ithome.com/0/947/010.htm" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </article>
+      <article class="card" data-title="旧版AI模型急诊诊断已超越人类医生" data-summary="一项发表于《科学》的研究显示，OpenAI一年前发布的o1模型在急诊诊断中表现优于医生。该模型在真实、混乱的急诊数据测试…" data-source="X：Kim (@kimmonismus)" data-domain="x.com">
+        <div class="card-top">
+          <span class="card-num card-num-medical">33</span>
+          <h3 class="card-title">旧版AI模型急诊诊断已超越人类医生</h3>
+        </div>
+        <div class="card-meta">
+          <span class="source-chip"><span class="chip-icon">◎</span> X：Kim (@kimmonismus) <span class="chip-domain">x.com</span></span>
+          <span class="time-str">凌晨2:54</span>
+        </div>
+        <p class="card-summary">一项发表于《科学》的研究显示，OpenAI一年前发布的o1模型在急诊诊断中表现优于医生。该模型在真实、混乱的急诊数据测试…</p>
+        <div class="card-footer">
+          <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">x.com</span></div>
+          <a class="read-btn read-btn-medical" href="https://x.com/kimmonismus/status/2053549177670689001" target="_blank" rel="noopener noreferrer">阅读原文</a>
+        </div>
+      </article></div>
+  </section>
+
+</main>
+
+<footer class="report-footer">
+  <p>本期共收录 <strong>33 条</strong> AI 资讯
+    <span style="margin:0 6px;">·</span><strong>模型 3</strong>
+    <span style="margin:0 6px;">·</span><strong>产品 8</strong>
+    <span style="margin:0 6px;">·</span><strong>行业 6</strong>
+    <span style="margin:0 6px;">·</span><strong>论文 3</strong>
+    <span style="margin:0 6px;">·</span><strong>技巧 8</strong>
+    <span style="margin:0 6px;">·</span><strong>医药 5</strong>
+  </p>
+  <p style="margin-top:6px;">数据来自 <a href="https://aihot.virxact.com" target="_blank">aihot.virxact.com</a> · 自动生成于 2026/5/13 00:25:52</p>
+</footer>
+
+</body>
+</html>
