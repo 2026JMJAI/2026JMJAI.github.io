@@ -33,31 +33,23 @@
   .nav-inner { max-width:1140px; margin:0 auto; padding:0 24px; display:flex; align-items:center; gap:10px; height:56px; overflow-x:auto; scrollbar-width:none; }
   .nav-inner::-webkit-scrollbar { display:none; }
   .nav-link { display:inline-flex; align-items:center; gap:6px; padding:6px 14px; border-radius:999px; font-size:13px; font-weight:700; text-decoration:none; white-space:nowrap; transition:background 0.2s, color 0.2s; }
-  .nav-link-model { color:var(--blue-800); background:var(--blue-50); border:1.5px solid var(--blue-200); }
-  .nav-link-model:hover { background:var(--blue-100); color:var(--blue-900); }
   .nav-link-product { color:#6d28d9; background:#f5f3ff; border:1.5px solid #c4b5fd; }
-  .nav-link-product:hover { background:#ede9fe; color:#4c1d95; }.nav-link-medical { color:#065f46; background:#ecfdf5; border:1.5px solid #6ee7b7; }
-  .nav-link-medical:hover { background:#d1fae5; color:#064e3b; }
+  .nav-link-product:hover { background:#ede9fe; color:#4c1d95; }
   .nav-count { background:var(--blue-600); color:white; width:18px; height:18px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; margin-left:4px; }
   .main { max-width:1140px; margin:0 auto; padding:40px 24px 60px; }
   .section { margin-bottom:56px; }
   .section-header { display:flex; align-items:center; gap:14px; margin-bottom:24px; }
   .section-icon { width:48px; height:48px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:22px; flex-shrink:0; box-shadow:0 2px 8px rgba(30,64,175,0.10); }
-  .section-icon-model { background:linear-gradient(135deg,#2563eb,#1d4ed8); color:#ffffff; }
-  .section-icon-product { background:linear-gradient(135deg,#7c3aed,#6d28d9); color:#ffffff; }.section-icon-medical { background:linear-gradient(135deg,#0d9488,#0f766e); color:#ffffff; }
+  .section-icon-product { background:linear-gradient(135deg,#7c3aed,#6d28d9); color:#ffffff; }
   .section-title { font-size:22px; font-weight:900; }
-  .section-title-model { color:var(--blue-900); }
-  .section-title-product { color:#4c1d95; }.section-title-medical { color:#064e3b; }
+  .section-title-product { color:#4c1d95; }
   .section-sub { font-size:13px; color:var(--gray-500); margin-top:3px; font-weight:500; }
   .section-divider { flex:1; height:2px; border-radius:1px; opacity:0.5; }
-  .section-divider-model { background:linear-gradient(90deg,var(--blue-500),transparent); }
-  .section-divider-product { background:linear-gradient(90deg,#8b5cf6,transparent); }.section-divider-medical { background:linear-gradient(90deg,#14b8a6,transparent); }
+  .section-divider-product { background:linear-gradient(90deg,#8b5cf6,transparent); }
   .card-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:16px; }
   .card { background:#ffffff; border-radius:var(--radius-lg); border:1.5px solid var(--blue-100); padding:22px; box-shadow:0 2px 8px rgba(30,64,175,0.06); display:flex; flex-direction:column; gap:14px; transition:transform 0.22s ease,box-shadow 0.22s ease,border-color 0.22s ease; }
   .card:hover { transform:translateY(-4px); box-shadow:0 12px 32px rgba(30,64,175,0.12); border-color:var(--blue-300); }
-  .card-num { width:28px; height:28px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; flex-shrink:0; margin-top:1px; }
-  .card-num-model { background:var(--blue-100); color:var(--blue-800); }
-  .card-num-product { background:#ede9fe; color:#6d28d9; }.card-num-medical { background:#d1fae5; color:#065f46; }
+  .card-num { width:28px; height:28px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; flex-shrink:0; margin-top:1px; background:#ede9fe; color:#6d28d9; }
   .card-title { font-size:15px; font-weight:700; color:var(--gray-900); line-height:1.45; flex:1; }
   .card-meta { display:flex; align-items:center; justify-content:space-between; gap:8px; flex-wrap:wrap; }
   .source-chip { display:inline-flex; align-items:center; gap:5px; background:var(--blue-50); border:1.5px solid var(--blue-200); color:var(--blue-700); font-size:11px; font-weight:700; padding:3px 10px; border-radius:999px; max-width:220px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
@@ -69,13 +61,8 @@
   .card-tag { font-size:9px; font-weight:700; padding:2px 6px; border-radius:4px; }
   .card-tag-en { background:#fef3c7; color:#92400e; }
   .card-tag-source { background:var(--blue-50); color:var(--blue-600); border:1px solid var(--blue-200); }
-  .read-btn { display:inline-flex; align-items:center; gap:5px; font-size:12px; font-weight:700; padding:6px 16px; border-radius:999px; text-decoration:none; transition:background 0.18s,transform 0.18s; border:1.5px solid transparent; white-space:nowrap; }
-  .read-btn::after { content:''; } /* hover handled by JS or remove */
-  .read-btn-model { color:var(--blue-700); background:var(--blue-50); border-color:var(--blue-300); }
-  .read-btn-model:hover { background:var(--blue-100); }
-  .read-btn-product { color:#6d28d9; background:#f5f3ff; border-color:#c4b5fd; }
-  .read-btn-product:hover { background:#ede9fe; }.read-btn-medical { color:#065f46; background:#ecfdf5; border-color:#6ee7b7; }
-  .read-btn-medical:hover { background:#d1fae5; }
+  .read-btn { display:inline-flex; align-items:center; gap:5px; font-size:12px; font-weight:700; padding:6px 16px; border-radius:999px; text-decoration:none; transition:background 0.18s,transform 0.18s; border:1.5px solid transparent; white-space:nowrap; color:#6d28d9; background:#f5f3ff; border-color:#c4b5fd; }
+  .read-btn:hover { background:#ede9fe; }
   .report-footer { text-align:center; padding:32px 24px 48px; border-top:2px solid var(--blue-100); color:var(--gray-500); font-size:12px; line-height:1.8; background:linear-gradient(180deg,#f8fafc 0%,#ffffff 100%); }
   .report-footer a { color:var(--blue-600); text-decoration:none; font-weight:600; }
   .report-footer a:hover { color:var(--blue-800); text-decoration:underline; }
@@ -90,33 +77,30 @@
     <h1 class="hero-title">AI 晨报仪表盘</h1>
     <p class="hero-date">2026-06-23 · 北京时间早报</p>
     <div class="hero-stats">
-      <div class="stat-card"><span class="stat-num">16</span><span class="stat-label">今日总条数</span></div>
-      <div class="stat-card"><span class="stat-num">1</span><span class="stat-label">🤖 模型发布/更新</span></div>
-      <div class="stat-card"><span class="stat-num">12</span><span class="stat-label">📦 产品发布/更新</span></div>
-      <div class="stat-card"><span class="stat-num">3</span><span class="stat-label">🏥 医药行业落地</span></div>
+      <div class="stat-card"><span class="stat-num">13</span><span class="stat-label">今日总条数</span></div>
+      <div class="stat-card"><span class="stat-num">13</span><span class="stat-label">📦 产品发布/更新</span></div>
     </div>
   </div>
 </header>
 
 <nav class="sticky-nav">
   <div class="nav-inner">
-    <a href="#section-model" class="nav-link nav-link-model">🤖 模型<span class="nav-count">1</span></a>
-    <a href="#section-product" class="nav-link nav-link-product">📦 产品<span class="nav-count">12</span></a>    <a href="#section-medical" class="nav-link nav-link-medical">🏥 医药<span class="nav-count">3</span></a>
+    <a href="#section-product" class="nav-link nav-link-product">📦 产品<span class="nav-count">13</span></a>
   </div>
 </nav>
 
 <main class="main">
 
-  <section class="section" id="section-model">
+  <section class="section" id="section-product">
     <div class="section-header">
-      <div class="section-icon section-icon-model">🤖</div>
-      <div><h2 class="section-title section-title-model">模型发布 / 更新</h2><p class="section-sub">今日共 1 条</p></div>
-      <div class="section-divider section-divider-model"></div>
+      <div class="section-icon section-icon-product">📦</div>
+      <div><h2 class="section-title section-title-product">产品发布 / 更新</h2><p class="section-sub">今日共 13 条</p></div>
+      <div class="section-divider section-divider-product"></div>
     </div>
     <div class="card-grid">
       <article class="card" data-title="PP-OCRv6 on Hugging Face：50 语言 OCR，参数规模 1.5M 至 34.5M" data-summary="PP-OCRv6 是 PaddleOCR 最新一代通用 OCR 模型族，提供 tiny（1.5M）、small（7.7M…" data-source="Hugging Face：Blog（RSS）" data-domain="huggingface.co">
         <div class="card-top">
-          <span class="card-num card-num-model">01</span>
+          <span class="card-num">01</span>
           <h3 class="card-title">PP-OCRv6 on Hugging Face：50 语言 OCR，参数规模 1.5M 至 34.5M</h3>
         </div>
         <div class="card-meta">
@@ -126,21 +110,12 @@
         <p class="card-summary">PP-OCRv6 是 PaddleOCR 最新一代通用 OCR 模型族，提供 tiny（1.5M）、small（7.7M…</p>
         <div class="card-footer">
           <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">huggingface.co</span></div>
-          <a class="read-btn read-btn-model" href="https://huggingface.co/blog/PaddlePaddle/pp-ocrv6" target="_blank" rel="noopener noreferrer">阅读原文</a>
+          <a class="read-btn" href="https://huggingface.co/blog/PaddlePaddle/pp-ocrv6" target="_blank" rel="noopener noreferrer">阅读原文</a>
         </div>
-      </article></div>
-  </section>
-
-  <section class="section" id="section-product">
-    <div class="section-header">
-      <div class="section-icon section-icon-product">📦</div>
-      <div><h2 class="section-title section-title-product">产品发布 / 更新</h2><p class="section-sub">今日共 12 条</p></div>
-      <div class="section-divider section-divider-product"></div>
-    </div>
-    <div class="card-grid">
+      </article>
       <article class="card" data-title="东京 AI 公司 Sakana AI 推出多智能体编排系统 Sakana Fugu" data-summary="Sakana AI 是 2023 年成立于东京的 AI 公司，由前 Google Brain 的 David Ha（CE…" data-source="X：Berry Xia (@berryxia)" data-domain="x.com">
         <div class="card-top">
-          <span class="card-num card-num-product">02</span>
+          <span class="card-num">02</span>
           <h3 class="card-title">东京 AI 公司 Sakana AI 推出多智能体编排系统 Sakana Fugu</h3>
         </div>
         <div class="card-meta">
@@ -150,12 +125,12 @@
         <p class="card-summary">Sakana AI 是 2023 年成立于东京的 AI 公司，由前 Google Brain 的 David Ha（CE…</p>
         <div class="card-footer">
           <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">x.com</span></div>
-          <a class="read-btn read-btn-product" href="https://x.com/berryxia/status/2069090959938466298" target="_blank" rel="noopener noreferrer">阅读原文</a>
+          <a class="read-btn" href="https://x.com/berryxia/status/2069090959938466298" target="_blank" rel="noopener noreferrer">阅读原文</a>
         </div>
       </article>
       <article class="card" data-title="Show HN：Oak——专为代理设计的 Git 替代方案" data-summary="Oak 是开源版本控制系统，专为 AI 智能体（Claude Code、Codex、Cursor）设计。采用 BLAKE…" data-source="Hacker News 热门（buzzing.cc 中文翻译）" data-domain="oak.space">
         <div class="card-top">
-          <span class="card-num card-num-product">03</span>
+          <span class="card-num">03</span>
           <h3 class="card-title">Show HN：Oak——专为代理设计的 Git 替代方案</h3>
         </div>
         <div class="card-meta">
@@ -165,12 +140,12 @@
         <p class="card-summary">Oak 是开源版本控制系统，专为 AI 智能体（Claude Code、Codex、Cursor）设计。采用 BLAKE…</p>
         <div class="card-footer">
           <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">oak.space</span></div>
-          <a class="read-btn read-btn-product" href="https://oak.space/oak/oak" target="_blank" rel="noopener noreferrer">阅读原文</a>
+          <a class="read-btn" href="https://oak.space/oak/oak" target="_blank" rel="noopener noreferrer">阅读原文</a>
         </div>
       </article>
       <article class="card" data-title="微信Agent小微灰度内测：主入口发消息红包，子入口可读聊天记录" data-summary="微信Agent小微灰度内测已开始，主入口位于微信首页左上角，支持给好友发消息和红包（需确认），但无法读取聊天记录或向群聊…" data-source="公众号：数字生命卡兹克" data-domain="mp.weixin.qq.com">
         <div class="card-top">
-          <span class="card-num card-num-product">04</span>
+          <span class="card-num">04</span>
           <h3 class="card-title">微信Agent小微灰度内测：主入口发消息红包，子入口可读聊天记录</h3>
         </div>
         <div class="card-meta">
@@ -180,12 +155,12 @@
         <p class="card-summary">微信Agent小微灰度内测已开始，主入口位于微信首页左上角，支持给好友发消息和红包（需确认），但无法读取聊天记录或向群聊…</p>
         <div class="card-footer">
           <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">mp.weixin.qq.com</span></div>
-          <a class="read-btn read-btn-product" href="https://mp.weixin.qq.com/s/qVdfx01e9C9r5mGi0jh2BA" target="_blank" rel="noopener noreferrer">阅读原文</a>
+          <a class="read-btn" href="https://mp.weixin.qq.com/s/qVdfx01e9C9r5mGi0jh2BA" target="_blank" rel="noopener noreferrer">阅读原文</a>
         </div>
       </article>
       <article class="card" data-title="Aleph 2.0 现已集成到 Figma Weave" data-summary="Aleph 2.0 是 Runway 的旗舰视频编辑模型，现已在 Figma Weave 中上线。它是一个基于上下文的视…" data-source="Runway：News（网页）" data-domain="runwayml.com">
         <div class="card-top">
-          <span class="card-num card-num-product">05</span>
+          <span class="card-num">05</span>
           <h3 class="card-title">Aleph 2.0 现已集成到 Figma Weave</h3>
         </div>
         <div class="card-meta">
@@ -195,12 +170,12 @@
         <p class="card-summary">Aleph 2.0 是 Runway 的旗舰视频编辑模型，现已在 Figma Weave 中上线。它是一个基于上下文的视…</p>
         <div class="card-footer">
           <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">runwayml.com</span></div>
-          <a class="read-btn read-btn-product" href="https://runwayml.com/news/aleph-2-in-figma-weave" target="_blank" rel="noopener noreferrer">阅读原文</a>
+          <a class="read-btn" href="https://runwayml.com/news/aleph-2-in-figma-weave" target="_blank" rel="noopener noreferrer">阅读原文</a>
         </div>
       </article>
       <article class="card" data-title="在 AWS、Google Cloud 和 Microsoft Foundry 上使用完整版 Claude Desktop" data-summary="通过 AWS、Google Cloud 和 Microsoft Foundry 使用 Claude Desktop 的组…" data-source="Claude：Blog（网页）" data-domain="claude.com">
         <div class="card-top">
-          <span class="card-num card-num-product">06</span>
+          <span class="card-num">06</span>
           <h3 class="card-title">在 AWS、Google Cloud 和 Microsoft Foundry 上使用完整版 Claude Desktop</h3>
         </div>
         <div class="card-meta">
@@ -210,12 +185,12 @@
         <p class="card-summary">通过 AWS、Google Cloud 和 Microsoft Foundry 使用 Claude Desktop 的组…</p>
         <div class="card-footer">
           <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">claude.com</span></div>
-          <a class="read-btn read-btn-product" href="https://claude.com/blog/the-full-claude-desktop-experience-on-aws-google-cloud-and-microsoft-foundry" target="_blank" rel="noopener noreferrer">阅读原文</a>
+          <a class="read-btn" href="https://claude.com/blog/the-full-claude-desktop-experience-on-aws-google-cloud-and-microsoft-foundry" target="_blank" rel="noopener noreferrer">阅读原文</a>
         </div>
       </article>
       <article class="card" data-title="Claude Code v2.1.186 发布" data-summary="新增 `claude mcp login/logout` 命令，支持从 CLI 认证 MCP 服务器并完成 SSH 无浏…" data-source="Claude Code：GitHub Releases（RSS）" data-domain="github.com">
         <div class="card-top">
-          <span class="card-num card-num-product">07</span>
+          <span class="card-num">07</span>
           <h3 class="card-title">Claude Code v2.1.186 发布</h3>
         </div>
         <div class="card-meta">
@@ -225,12 +200,12 @@
         <p class="card-summary">新增 `claude mcp login/logout` 命令，支持从 CLI 认证 MCP 服务器并完成 SSH 无浏…</p>
         <div class="card-footer">
           <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">github.com</span></div>
-          <a class="read-btn read-btn-product" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.186" target="_blank" rel="noopener noreferrer">阅读原文</a>
+          <a class="read-btn" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.186" target="_blank" rel="noopener noreferrer">阅读原文</a>
         </div>
       </article>
       <article class="card" data-title="开辟新赛道：小米 YU7 GT 创全球首个纽北自动驾驶圈速纪录，官方圈速榜新增“自动驾驶”分类" data-summary="小米 YU7 GT（选配赛道专业套装）在纽博格林北环赛道以自动驾驶系统完成全程无人计时圈，成绩 10 分 29 秒 48…" data-source="IT之家（RSS）" data-domain="ithome.com">
         <div class="card-top">
-          <span class="card-num card-num-product">08</span>
+          <span class="card-num">08</span>
           <h3 class="card-title">开辟新赛道：小米 YU7 GT 创全球首个纽北自动驾驶圈速纪录，官方圈速榜新增“自动驾驶”分类</h3>
         </div>
         <div class="card-meta">
@@ -240,12 +215,12 @@
         <p class="card-summary">小米 YU7 GT（选配赛道专业套装）在纽博格林北环赛道以自动驾驶系统完成全程无人计时圈，成绩 10 分 29 秒 48…</p>
         <div class="card-footer">
           <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">ithome.com</span></div>
-          <a class="read-btn read-btn-product" href="https://www.ithome.com/0/967/234.htm" target="_blank" rel="noopener noreferrer">阅读原文</a>
+          <a class="read-btn" href="https://www.ithome.com/0/967/234.htm" target="_blank" rel="noopener noreferrer">阅读原文</a>
         </div>
       </article>
       <article class="card" data-title="美国警长利用Flock车牌系统跟踪前女友案频发，Flock法务官承认“最常见滥用”" data-summary="伊利诺伊州Holiday Hills警察局长于2026年6月18日被捕，被控两项渎职重罪。检方指控他利用Flock车牌读…" data-source="Hacker News 热门（buzzing.cc 中文翻译）" data-domain="ipvm.com">
         <div class="card-top">
-          <span class="card-num card-num-product">09</span>
+          <span class="card-num">09</span>
           <h3 class="card-title">美国警长利用Flock车牌系统跟踪前女友案频发，Flock法务官承认“最常见滥用”</h3>
         </div>
         <div class="card-meta">
@@ -255,12 +230,12 @@
         <p class="card-summary">伊利诺伊州Holiday Hills警察局长于2026年6月18日被捕，被控两项渎职重罪。检方指控他利用Flock车牌读…</p>
         <div class="card-footer">
           <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">ipvm.com</span></div>
-          <a class="read-btn read-btn-product" href="https://ipvm.com/reports/police-chiefs-track" target="_blank" rel="noopener noreferrer">阅读原文</a>
+          <a class="read-btn" href="https://ipvm.com/reports/police-chiefs-track" target="_blank" rel="noopener noreferrer">阅读原文</a>
         </div>
       </article>
       <article class="card" data-title="Google DeepMind 7500 万美元投资 A24，合作开发电影 AI 工具" data-summary="Google DeepMind 宣布向独立电影制片厂 A24 投资 7500 万美元（据《华尔街日报》），双方将合作开发…" data-source="TechCrunch：AI（RSS）" data-domain="techcrunch.com">
         <div class="card-top">
-          <span class="card-num card-num-product">10</span>
+          <span class="card-num">10</span>
           <h3 class="card-title">Google DeepMind 7500 万美元投资 A24，合作开发电影 AI 工具</h3>
         </div>
         <div class="card-meta">
@@ -270,12 +245,12 @@
         <p class="card-summary">Google DeepMind 宣布向独立电影制片厂 A24 投资 7500 万美元（据《华尔街日报》），双方将合作开发…</p>
         <div class="card-footer">
           <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">techcrunch.com</span></div>
-          <a class="read-btn read-btn-product" href="https://techcrunch.com/2026/06/22/google-deepmind-bets-75m-on-ais-future-in-hollywood-with-a24-deal" target="_blank" rel="noopener noreferrer">阅读原文</a>
+          <a class="read-btn" href="https://techcrunch.com/2026/06/22/google-deepmind-bets-75m-on-ais-future-in-hollywood-with-a24-deal" target="_blank" rel="noopener noreferrer">阅读原文</a>
         </div>
       </article>
       <article class="card" data-title="Google Labs 提出用“洞察策略”评估 AI 编码智能体的主动性" data-summary="Google Labs 提出以“洞察策略”评估 AI 编码智能体的主动性，而非仅按任务完成度打分。团队基于 Google…" data-source="Google Developers Blog（RSS）" data-domain="developers.googleblog.com">
         <div class="card-top">
-          <span class="card-num card-num-product">11</span>
+          <span class="card-num">11</span>
           <h3 class="card-title">Google Labs 提出用“洞察策略”评估 AI 编码智能体的主动性</h3>
         </div>
         <div class="card-meta">
@@ -285,12 +260,12 @@
         <p class="card-summary">Google Labs 提出以“洞察策略”评估 AI 编码智能体的主动性，而非仅按任务完成度打分。团队基于 Google…</p>
         <div class="card-footer">
           <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">developers.googleblog.com</span></div>
-          <a class="read-btn read-btn-product" href="https://developers.googleblog.com/measuring-what-matters-with-jules" target="_blank" rel="noopener noreferrer">阅读原文</a>
+          <a class="read-btn" href="https://developers.googleblog.com/measuring-what-matters-with-jules" target="_blank" rel="noopener noreferrer">阅读原文</a>
         </div>
       </article>
       <article class="card" data-title="Anthropic 工程负责人：Claude Code 让程序员更孤独" data-summary="6月22日，Anthropic工程负责人Fiona Fung表示，Claude Code和Claude Cowork等A…" data-source="IT之家（RSS）" data-domain="ithome.com">
         <div class="card-top">
-          <span class="card-num card-num-product">12</span>
+          <span class="card-num">12</span>
           <h3 class="card-title">Anthropic 工程负责人：Claude Code 让程序员更孤独</h3>
         </div>
         <div class="card-meta">
@@ -300,12 +275,12 @@
         <p class="card-summary">6月22日，Anthropic工程负责人Fiona Fung表示，Claude Code和Claude Cowork等A…</p>
         <div class="card-footer">
           <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">ithome.com</span></div>
-          <a class="read-btn read-btn-product" href="https://www.ithome.com/0/967/216.htm" target="_blank" rel="noopener noreferrer">阅读原文</a>
+          <a class="read-btn" href="https://www.ithome.com/0/967/216.htm" target="_blank" rel="noopener noreferrer">阅读原文</a>
         </div>
       </article>
       <article class="card" data-title="Google ADK 与 A2A 协议：跨语言多智能体团队构建实战" data-summary="一篇技术博客展示了如何用 Google Agent Development Kit (ADK) 与 Agent2Agen…" data-source="Google Developers Blog（RSS）" data-domain="developers.googleblog.com">
         <div class="card-top">
-          <span class="card-num card-num-product">13</span>
+          <span class="card-num">13</span>
           <h3 class="card-title">Google ADK 与 A2A 协议：跨语言多智能体团队构建实战</h3>
         </div>
         <div class="card-meta">
@@ -315,61 +290,7 @@
         <p class="card-summary">一篇技术博客展示了如何用 Google Agent Development Kit (ADK) 与 Agent2Agen…</p>
         <div class="card-footer">
           <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">developers.googleblog.com</span></div>
-          <a class="read-btn read-btn-product" href="https://developers.googleblog.com/build-cross-language-multi-agent-team-with-google-agent-development-kit-and-a2a" target="_blank" rel="noopener noreferrer">阅读原文</a>
-        </div>
-      </article></div>
-  </section>
-
-  <section class="section" id="section-medical">
-    <div class="section-header">
-      <div class="section-icon section-icon-medical">🏥</div>
-      <div><h2 class="section-title section-title-medical">医药行业落地案例</h2><p class="section-sub">近 7 日共 3 条</p></div>
-      <div class="section-divider section-divider-medical"></div>
-    </div>
-    <div class="card-grid">
-      <article class="card" data-title="Google 医学推理 AI 系统 AMIE 新研究：从诊断迈向长期疾病管理" data-summary="今日发表在《自然》杂志上的研究展示了 Google 的医学推理 AI 系统 AMIE（Articulate Medica…" data-source="Google Blog：AI（RSS）" data-domain="blog.google">
-        <div class="card-top">
-          <span class="card-num card-num-medical">14</span>
-          <h3 class="card-title">Google 医学推理 AI 系统 AMIE 新研究：从诊断迈向长期疾病管理</h3>
-        </div>
-        <div class="card-meta">
-          <span class="source-chip"><span class="chip-icon">◎</span> Google Blog：AI（RSS） <span class="chip-domain">blog.google</span></span>
-          <span class="time-str">晚上23:00</span>
-        </div>
-        <p class="card-summary">今日发表在《自然》杂志上的研究展示了 Google 的医学推理 AI 系统 AMIE（Articulate Medica…</p>
-        <div class="card-footer">
-          <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">blog.google</span></div>
-          <a class="read-btn read-btn-medical" href="https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature" target="_blank" rel="noopener noreferrer">阅读原文</a>
-        </div>
-      </article>
-      <article class="card" data-title="OpenAI 强化学习实现广泛且持久的有益模型" data-summary="OpenAI 通过强化学习在真实对话场景中训练模型，使其展现诚实、认知谦逊、元认知透明、可纠正性、普遍公平性和对人类福祉…" data-source="OpenAI：Alignment 研究博客（RSS）" data-domain="alignment.openai.com">
-        <div class="card-top">
-          <span class="card-num card-num-medical">15</span>
-          <h3 class="card-title">OpenAI 强化学习实现广泛且持久的有益模型</h3>
-        </div>
-        <div class="card-meta">
-          <span class="source-chip"><span class="chip-icon">◎</span> OpenAI：Alignment 研究博客（RSS） <span class="chip-domain">alignment.openai.com</span></span>
-          <span class="time-str">凌晨2:00</span>
-        </div>
-        <p class="card-summary">OpenAI 通过强化学习在真实对话场景中训练模型，使其展现诚实、认知谦逊、元认知透明、可纠正性、普遍公平性和对人类福祉…</p>
-        <div class="card-footer">
-          <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">alignment.openai.com</span></div>
-          <a class="read-btn read-btn-medical" href="https://alignment.openai.com/beneficial-rl" target="_blank" rel="noopener noreferrer">阅读原文</a>
-        </div>
-      </article>
-      <article class="card" data-title="Nature两篇研究：MIRA和AMIE诊断与治疗计划媲美甚至超越医生" data-summary="德国团队开发的MIRA智能体在模拟电子病历中操作85，000种选项，500余例急诊诊断准确率88.9%，对比测试（311…" data-source="The Decoder：AI News（RSS）" data-domain="the-decoder.com">
-        <div class="card-top">
-          <span class="card-num card-num-medical">16</span>
-          <h3 class="card-title">Nature两篇研究：MIRA和AMIE诊断与治疗计划媲美甚至超越医生</h3>
-        </div>
-        <div class="card-meta">
-          <span class="source-chip"><span class="chip-icon">◎</span> The Decoder：AI News（RSS） <span class="chip-domain">the-decoder.com</span></span>
-          <span class="time-str">晚上22:37</span>
-        </div>
-        <p class="card-summary">德国团队开发的MIRA智能体在模拟电子病历中操作85，000种选项，500余例急诊诊断准确率88.9%，对比测试（311…</p>
-        <div class="card-footer">
-          <div class="card-tags"><span class="card-tag card-tag-en">EN</span><span class="card-tag card-tag-source">the-decoder.com</span></div>
-          <a class="read-btn read-btn-medical" href="https://the-decoder.com/ai-systems-rival-doctors-in-new-nature-studies-but-one-result-suggests-the-tech-wont-age-well" target="_blank" rel="noopener noreferrer">阅读原文</a>
+          <a class="read-btn" href="https://developers.googleblog.com/build-cross-language-multi-agent-team-with-google-agent-development-kit-and-a2a" target="_blank" rel="noopener noreferrer">阅读原文</a>
         </div>
       </article></div>
   </section>
@@ -377,12 +298,8 @@
 </main>
 
 <footer class="report-footer">
-  <p>本期共收录 <strong>16 条</strong> AI 资讯
-    <span style="margin:0 6px;">·</span><strong>模型 1</strong>
-    <span style="margin:0 6px;">·</span><strong>产品 12</strong>
-    <span style="margin:0 6px;">·</span><strong>医药 3</strong>
-  </p>
-  <p style="margin-top:6px;">数据来自 <a href="https://aihot.virxact.com" target="_blank">aihot.virxact.com</a> · 自动生成于 2026/6/23 22:10:59</p>
+  <p>本期共收录 <strong>13 条</strong> AI 资讯</p>
+  <p style="margin-top:6px;">数据来自 <a href="https://aihot.virxact.com" target="_blank">aihot.virxact.com</a> · 自动生成于 2026/6/23 23:34:38</p>
 </footer>
 
 </body>
